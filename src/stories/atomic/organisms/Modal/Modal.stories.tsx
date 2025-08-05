@@ -28,13 +28,19 @@ export const Default: StoryObj<typeof Modal> = {
 
     return (
       <>
-        <Button label="Open Modal" onClick={() => setIsOpen(true)} primary />
+        <Button onClick={() => setIsOpen(true)} primary>
+          Open Modal
+        </Button>
 
         <Modal
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
           title="Sample Modal"
-          footer={<Button label="Close" onClick={() => setIsOpen(false)} primary />}
+          footer={
+            <Button onClick={() => setIsOpen(false)} primary>
+              Close
+            </Button>
+          }
         >
           <p>This is a sample modal dialog. Click outside or the close button to close it.</p>
           <p>You can put any content here, including forms, tables, or other components.</p>
@@ -57,7 +63,9 @@ export const WithForm: StoryObj<typeof Modal> = {
 
     return (
       <>
-        <Button label="Open Form Modal" onClick={() => setIsOpen(true)} primary />
+        <Button onClick={() => setIsOpen(true)} primary>
+          Open Form Modal
+        </Button>
 
         <Modal
           isOpen={isOpen}
@@ -65,13 +73,12 @@ export const WithForm: StoryObj<typeof Modal> = {
           title="Contact Form"
           footer={
             <>
-              <Button
-                label="Cancel"
-                onClick={() => setIsOpen(false)}
-                primary={false}
-                backgroundColor="#f5f5f5"
-              />
-              <Button label="Submit" onClick={handleSubmit} primary />
+              <Button onClick={() => setIsOpen(false)} primary={false} backgroundColor="#f5f5f5">
+                Cancel
+              </Button>
+              <Button onClick={handleSubmit} primary>
+                Submit
+              </Button>
             </>
           }
         >
@@ -105,14 +112,20 @@ export const LargeContent: StoryObj<typeof Modal> = {
 
     return (
       <>
-        <Button label="Open Large Content Modal" onClick={() => setIsOpen(true)} primary />
+        <Button onClick={() => setIsOpen(true)} primary>
+          Open Large Content Modal
+        </Button>
 
         <Modal
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
           title="Terms and Conditions"
           width="700px"
-          footer={<Button label="I Agree" onClick={() => setIsOpen(false)} primary />}
+          footer={
+            <Button onClick={() => setIsOpen(false)} primary>
+              I Agree
+            </Button>
+          }
         >
           <div style={{ height: '400px' }}>
             <h3>Terms of Service</h3>
@@ -167,12 +180,18 @@ export const NoHeader: StoryObj<typeof Modal> = {
 
     return (
       <>
-        <Button label="Open Modal Without Header" onClick={() => setIsOpen(true)} primary />
+        <Button onClick={() => setIsOpen(true)} primary>
+          Open Modal Without Header
+        </Button>
 
         <Modal
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
-          footer={<Button label="Close" onClick={() => setIsOpen(false)} primary />}
+          footer={
+            <Button onClick={() => setIsOpen(false)} primary>
+              Close
+            </Button>
+          }
         >
           <div style={{ textAlign: 'center', padding: '24px 0' }}>
             <h2>Alert</h2>

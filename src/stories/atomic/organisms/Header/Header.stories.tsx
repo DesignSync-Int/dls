@@ -67,18 +67,18 @@ export const WithActions: Story = {
         actions={[
           <Button
             key="help"
-            label="Help"
             onClick={() => alert('Help clicked')}
             primary={false}
             backgroundColor="#f5f5f5"
-          />,
-          <Button
-            key="signup"
-            label="Sign Up"
-            onClick={() => alert('Sign Up clicked')}
-            primary={false}
-          />,
-          <Button key="signin" primary label="Sign In" onClick={() => alert('Sign In clicked')} />,
+          >
+            Help
+          </Button>,
+          <Button key="signup" onClick={() => alert('Sign Up clicked')} primary={false}>
+            Sign Up
+          </Button>,
+          <Button key="signin" primary onClick={() => alert('Sign In clicked')}>
+            Sign In
+          </Button>,
         ]}
       />
     );

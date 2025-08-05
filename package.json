@@ -36,8 +36,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
-    "build:lib": "tsc -b && vite build --mode lib",
+    "build": "tsc -p tsconfig.build.json && vite build",
+    "build:lib": "tsc -p tsconfig.build.json && vite build --mode lib",
     "analyze-bundle": "npm run build && open dist/bundle-analysis.html",
     "monitor-bundle": "./scripts/bundle-monitor.sh",
     "ts-progressive": "./scripts/progressive-ts.sh",
